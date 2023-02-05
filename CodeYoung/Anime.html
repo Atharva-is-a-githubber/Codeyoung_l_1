@@ -1,0 +1,99 @@
+<html>
+<body>
+    <script>
+const canvas = document.querySelector('canvas');
+
+// Set the canvas dimensions to match the size of the character
+canvas.width = 500;
+canvas.height = 500;
+
+// Get the canvas context, which is used for drawing on the canvas
+const ctx = canvas.getContext('2d');
+
+// Set the initial position of the character
+let x = 0;
+let y = 0;
+
+// Set the speed at which the character will move
+const speed = 5;
+
+// Set the dimensions of the character
+const width = 50;
+const height = 50;
+
+// Set the initial direction of the character
+let direction = 'right';
+
+// Set the sprite sheet for the character
+const spriteSheet = new Image();
+spriteSheet.src = '/path/to/naruto-spritesheet.png';
+
+// Set the number of columns and rows in the sprite sheet
+const cols = 8;
+const rows = 8;
+
+// Set the sprite width and height
+const spriteWidth = spriteSheet.width / cols;
+const spriteHeight = spriteSheet.height / rows;
+
+// Set the initial frame of the character
+let frame = 0;
+
+// Set the total number of frames in the character's animation
+const totalFrames = cols * rows;
+
+// Set the rate at which the character's animation should play, in frames per second
+const frameRate = 10;
+
+// Calculate the time per frame based on the frame rate
+const timePerFrame = 1000 / frameRate;
+
+// Set the start time for the character's animation
+let startTime = Date.now();
+
+// Set up the game loop
+function gameLoop() {
+  // Calculate the elapsed time since the last frame
+  const elapsedTime = Date.now() - startTime;
+
+  // If enough time has passed, advance to the next frame
+  if (elapsedTime > timePerFrame) {
+    // Reset the start time for the next frame
+    startTime = Date.now();
+
+    // Advance to the next frame
+    frame++;
+
+    // If the character has reached the end of its animation, start over
+    if (frame >= totalFrames) {
+      frame = 0;
+    }
+  }
+
+  // Clear the canvas
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  // Update the character's position based on its direction
+  if (direction === 'right') {
+    x += speed;
+  } else if (direction === 'left') {
+    x -= speed;
+  } else if (direction === 'up') {
+    y -= speed;
+  } else if (direction === 'down') {
+    y += speed;
+  }
+
+  // Calculate the source x and y coordinates for the current frame
+  const sx = (frame % cols) * spriteWidth;
+  const sy = Math.floor(frame / cols) * spriteHeight;
+
+  // Draw the character on the canvas
+  ctx.drawImage(spriteSheet, sx, sy, spriteWidth, spriteHeight, x, y, width, height);
+
+  // Request the next frame of the animation
+  requestAnimationFrame()
+}
+</script>
+</body>
+</html>

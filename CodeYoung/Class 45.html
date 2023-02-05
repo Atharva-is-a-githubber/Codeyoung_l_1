@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <style>
+            p:first-letter{
+                color: blue;
+                font-size: xx-large;
+                font-weight: bold;
+                letter-spacing: 20px;
+            }
+            p::first-line{
+                font-weight: bolder;
+                font-size: medium;
+                text-decoration: underline;
+            }
+            a.highlight:hover{
+                color: fuchsia;
+                font-size: larger;
+            }
+            p{
+                display:none;
+                font-size: larger;
+                background-color: aquamarine;
+            }
+            div:hover p{
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <div> Hover here to see info.
+            <p> In Ladakh, ~33% of the total land is cultivated under agricultural activities with production of ~100,000 quintal per annum of food grains, which include key crops such as wheat, barley and rice produced across the Indus, Zanskar and Shyok river basins. </p>
+            <p> For more info, click <a class="highlight" href="https://www.ibef.org/states/ladakh#:~:text=In%20Ladakh%2C%20~33%25%20of,Zanskar%20and%20Shyok%20river%20basins."> here </a> </p>
+        </div>
+    </body>
+</html>

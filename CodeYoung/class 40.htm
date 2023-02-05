@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>
+            GEOLOCATION is a part of JS
+        </h1>
+        <button id="DD" onclick="e()">
+            Click for location leak
+        </button>
+        <script>
+            try{
+                navigator.geolocation.getCurrentPosition(pri);
+            }
+            catch{
+                document.write("ERROR, your location is secure.")
+            }
+            function pri(eee){
+                document.write("Latitude: " + eee.coords.latitude +  "<br>Longitude: " + eee.coords.longitude)
+            }
+        </script>
+    </body>
+</html>

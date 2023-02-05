@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Class 30-mouse functions on js</title>
+    </head>      
+    <body>
+        <img id="imgval" src="diamondes.png" width="250px">
+        <button id="hidingtime" onclick="hi()">HIDE please</button>
+        <button id="showtime" ondblclick="sh()">Showtime bois</button>
+        <h3 id="textexe" onmouseout="ono()" onmouseover="oyo()">Now you see me,</h3>
+        <script>
+            function hi(){
+                document.getElementById("imgval").style.display="none"
+            }
+            function sh(){                                  
+                document.getElementById("imgval").style.display="block"
+            }
+            function oyo(){
+                document.getElementById("textexe").innerHTML="now you don't!"
+            }
+            function ono(){
+                document.getElementById("textexe").innerHTML="Now you see me,"
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p id="para0"></p>
+        <p id="para1"></p>
+        <p id="para2"></p>
+        <p id="para3"></p>
+        <p id="para4"></p>
+        <p id="para5"></p>
+        <p id="para6"></p>
+        <p id="para7"></p>
+        <script>
+            var phones=["Apple","Samsung","Redmi"]
+            phones.push("One+")
+            document.getElementById("para0").innerHTML=phones
+            document.getElementById("para1").innerHTML=phones.length
+            document.getElementById("para2").innerHTML=phones[phones.length-1]
+            
+            var songapps=["Spotify","Apple Music","Youtube Music"]
+            document.getElementById("para3").innerHTML="Song apps: "+songapps
+            var test =songapps.pop()
+            document.getElementById("para4").innerHTML="Popped Item: "+test
+            document.getElementById("para5").innerHTML="After Pop results:  "+songapps
+            var testtwo =songapps.pop()
+            document.getElementById("para6").innerHTML="Popped Items: "+ test + "," + testtwo
+            document.getElementById("para7").innerHTML="Song apps: "+songapps
+        </script>
+    </body>
+</html>

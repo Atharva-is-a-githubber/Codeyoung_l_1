@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+            .hidetheobject{
+                background-color:crimson;
+                width: 200px;
+                height:200px;
+                border: cadetblue solid;
+                animation-name: magicwand;
+                animation-duration: 4s;
+                animation-delay: 3s;
+                animation-iteration-count: infinite;
+            }
+            @keyframes magicwand{
+                0%{
+                    background-color: crimson;
+                    border-radius: 0%;
+                    border-color: cadetblue;
+                    opacity: 1;
+                }
+                25%{
+                    opacity: 0.5;
+                    border-radius:25%;
+                    margin: 25%;
+                    background-color: cadetblue;
+                    border-color: crimson;
+                }
+                50%{
+                    opacity:0;
+                    bordr-radius: 50%;
+                    margien:50%;
+                    background-color:crimson;
+                    border-color: cadetblue;
+                }
+                75%{
+                    opacity:0.5;
+                    bordr-radius: 75%;
+                    margien:75%;
+                    background-color:crimson;
+                    border-color: cadetblue;
+                }
+                100%{
+                    opacity:1;
+                    bordr-radius: 100%;
+                    margien:100%;
+                    background-color:cadetblue;
+                    border-color: crimson;
+                }
+            }
+    </style>
+</head>
+<body>
+    <div class="hidetheobject">
+    </div>
+</body>
+</html>

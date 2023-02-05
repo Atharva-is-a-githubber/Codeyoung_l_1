@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .gamechanger{
+                background-color: crimson;
+                width: 200px;
+                height: 200px ;
+
+                animation-name: gamechange ;
+                animation-duration: 4s ;
+                animation-delay: 1s ;
+                animation-iteration-count: infinite ;
+            }
+            @keyframes gamechange {
+                from{
+                    height: 200px;
+                    width: 200px ;
+                    background-color: crimson;
+                }
+                to{
+                    height: 400px ;
+                    width:400px;
+                    background-color: #009999;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="gamechanger">
+        </div>
+    </body>
+</html>
